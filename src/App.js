@@ -61,14 +61,9 @@ const token =
     uri: 'wss://test-subscriptions.insense.pro/graphql',
     options: {
       reconnect: true,
-      connectionParams: {
-        headers: {
-          authToken: token
-        },
-      },
-      headers: {
+      connectionParams: () => ({
         authToken: token,
-      }
+      }),
     },
     
   });
